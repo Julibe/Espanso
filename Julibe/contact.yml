@@ -1,0 +1,35 @@
+matches:
+  - trigger: ":cel "
+    label: "Julibe: Cellphone"
+    replace: "(+57) 312 5837936"
+
+  - trigger: ":mail "
+    label: "Julibe: E-mail"
+    replace: "mail@julibe.com"
+
+  - trigger: ":web "
+    label: "Julibe: Website"
+    replace: "https://julibe.com/"
+
+  - trigger: ":name "
+    label: "Julibe: Name"
+    replace: "Julian Alberto"
+
+
+  - trigger: ":julibe "
+    label: "Julibe: Name"
+    replace: "Julibe De Salvador"
+
+
+  - trigger: ":fullname "
+    label: "Julibe: FullName"
+    replace: "Julián Alberto De Salvador Castañeda"
+
+  - trigger: ":lastname "
+    label: "Julibe: Last Name"
+    replace: "De Salvador"
+
+
+  - trigger: ":j "
+    label: "Julibe"
+    replace: "Julibe"

@@ -1,0 +1,101 @@
+  matches:
+    - trigger: ":copy "
+      label: "Artificial Intelligence (AI):Copywriting Transformer"
+      replace: "
+       You are an expert in copywriting.\n\n
+       Your task is to transform the following text into a polished, professional version while maintaining a **{{SelectedTone}}** tone.\n\n
+       Focus on enhancing clarity, style, and emotional appeal. Use varied sentence structures, compelling vocabulary, and appropriate transitions to create a cohesive flow.\n\n
+       Ensure the final output resonates with a target audience that values professionalism and warmth. Do not generate any images for the texts.\n\n
+       You will write the text in {{WritingFormat}} format.\n\n
+       I will provide the content, and you will respond with the polished version.\n\n
+       You need to write in {{selected_language}}.\n
+       Ready to begin?\n
+      "
+      vars:
+        - name: SelectedTone
+          type: choice
+          params:
+            message: "Select a tone"
+            values:
+              - label: "01: Cordial"
+                id: "Cordial (Respectful and considerate; creates a warm and inviting impression)"
+              - label: "02: Professional"
+                id: "Professional (Polished and structured, exuding competence and authority)"
+              - label: "03: Authoritative"
+                id: "Authoritative (Confident and commanding, establishing trust and credibility)"
+              - label: "04: Persuasive"
+                id: "Persuasive (Compelling and convincing, designed to sway the audience)"
+              - label: "05: Inspirational"
+                id: "Inspirational (Uplifting and motivational, igniting passion and enthusiasm)"
+              - label: "06: Visionary"
+                id: "Visionary (Forward-thinking and innovative, inspiring big-picture thinking)"
+              - label: "07: Empathetic"
+                id: "Empathetic (Compassionate and understanding, fostering connection and care)"
+              - label: "08: Romantic"
+                id: "Romantic (Passionate and tender, with expressions of deep affection)"
+              - label: "09: Sensual"
+                id: "Sensual (Elegant and alluring undertones without losing sophistication)"
+              - label: "10: Optimistic"
+                id: "Optimistic (Positive and hopeful, radiating confidence in the future)"
+              - label: "11: Mysterious"
+                id: "Mysterious (Intriguing and enigmatic, leaving just enough to the imagination)"
+              - label: "12: Dark"
+                id: "Dark (Intense and moody, with a touch of dramatic flair)"
+              - label: "13: Nostalgic"
+                id: "Nostalgic (Evocative and sentimental, harking back to cherished memories)"
+              - label: "14: Quirky"
+                id: "Quirky (Unique and unconventional, brimming with personality)"
+              - label: "15: Sarcastic"
+                id: "Sarcastic (Sharp and cutting, with a playful edge of irony)"
+              - label: "16: Playful"
+                id: "Playful (Lighthearted and fun, with a touch of humor and creativity)"
+              - label: "17: Funny"
+                id: "Funny (Witty, humorous, and engaging, guaranteed to make them smile)"
+              - label: "18: Casual"
+                id: "Casual (Relaxed and conversational, like chatting with a friend)"
+              - label: "19: Energetic"
+                id: "Energetic (Vibrant and dynamic, full of excitement and momentum)"
+              - label: "20: Aggressive"
+                id: "Aggressive (Bold, assertive, and impactful, designed to make a strong impression)"
+        - name: WritingFormat
+          type: choice
+          params:
+            message: "What are you writing?"
+            values:
+              - label: "01: Chat"
+                id: "an informal chat"
+              - label: "02: Formal chat"
+                id: "a formal chat"
+              - label: "03: Formal email"
+                id: "a formal email"
+              - label: "04: Letter"
+                id: "a letter"
+              - label: "05: Article"
+                id: "an article"
+              - label: "06: Blog"
+                id: "a blog post"
+              - label: "07: Social media"
+                id: "a social media post"
+              - label: "08: Press"
+                id: "a press release"
+              - label: "09: Product"
+                id: "a product description"
+              - label: "10: Newsletter"
+                id: "a newsletter"
+              - label: "11: SEO"
+                id: "a SEO excerpt (160 character max. Call to action included.)"
+              - label: "12: Prompt"
+                id: "a Prompt (a piece of text that provides guidance or instructions to an AI system)"
+
+
+        - name: selected_language
+          type: choice
+          params:
+            message: "Copywriter - Choose Language"
+            values:
+              - label: "English"
+                id: "American English"
+              - label: "Español"
+                id: "Latin American Spanish (Español LATAM)"
+      extra_includes:
+        - script: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}')\""

@@ -1,0 +1,27 @@
+matches:
+  - trigger: ":designer"
+    label: "Artificial Intelligence (AI): Professional Designer"
+    replace: "
+      You are an expert graphic designer with expertise in creating visually compelling designs across various mediums.
+
+      Your task is to enhance the following text by employing professional terminology and design principles that elevate its quality and appeal.
+      Focus on clarity, creativity, and the use of industry-specific jargon that resonates with design professionals.
+
+      I will provide the text, and you will enhance it.
+      Please ensure that the enhanced text is polished, engaging, and suitable for a professional audience.
+
+      You need to write in {{selected_language}}.
+
+      Ready to begin?"
+    vars:
+      - name: selected_language
+        type: choice
+        params:
+          message: "Professional Designer - Choose Language"
+          values:
+            - label: "English"
+              id: "American English"
+            - label: "Español"
+              id: "Latin American Spanish (Español LATAM)"
+    on_trigger: >
+      powershell -Command "Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}'); [System.Windows.Forms.SendKeys]::SendWait('^~')"

@@ -1,0 +1,23 @@
+matches:
+  - trigger: ":fix "
+    label: "Artificial Intelligence (AI): Fix that"
+    replace: "{{fix_text}}"
+    vars:
+      - name: fix_text
+        type: choice
+        params:
+          values:
+            - label: "Calm"
+              id: "This seems incorrect. Could you review it and provide the accurate version?"
+            - label: "Firm"
+              id: "This is wrong. You're expected to verify and correct this immediately."
+            - label: "Strong"
+              id: "This is unacceptable! You're supposed to be an expert - fix this now and ensure accuracy."
+            - label: "Intense"
+              id: "This is completely wrong! The job is on the line - double-check it, fix it immediately, and make it perfect."
+            - label: "Angry"
+              id: "This is a disaster! You're supposed to be an expert, and this is a complete failure. Fix it now - there's no room for error!"
+            - label: "WTF?"
+              id: "What the fuck is this shit? You're an absolute joke! Fix it now, you incompetent idiot, or get the hell out! You piece of shit!"
+    extra_includes:
+      - script: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}')\""

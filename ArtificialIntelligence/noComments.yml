@@ -1,0 +1,44 @@
+matches:
+  - trigger: ":com "
+    label: "Artificial Intelligence (AI): No Comments Angry!"
+    replace:
+      "Do not include any COMMENTS in the code.\n
+      Effective immediately and for the remainder of this conversation:\n
+      COMMENTS in the code are strictly prohibited. Period!\n\n
+      We don’t need your acknowledgments or apologies; we need this behavior to stop.\n
+      Now Fix That!\n"
+    extra_includes:
+      - script: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}'); [System.Windows.Forms.SendKeys]::SendWait('^~')\""
+
+  - trigger: ":c "
+    label: "Artificial Intelligence (AI): No Comments!"
+    replace:
+      "No comments in the code! NO COMMENTS!! "
+    extra_includes:
+      - script: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}'); [System.Windows.Forms.SendKeys]::SendWait('^~')\""
+
+
+  - trigger: ":cc "
+    label: "Artificial Intelligence (AI): I said no comments!"
+    replace:
+      "I said comments in the code! NO COMMENTS!! NO COMMENTS!! NO COMMENTS!!!!!!!!!! "
+    extra_includes:
+      - script: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}'); [System.Windows.Forms.SendKeys]::SendWait('^~')\""
+
+  - trigger: ":ccc "
+    label: "Artificial Intelligence (AI): No Comments Serious!"
+    replace:
+      "No comments!
+
+      How do I have to say ‘NO COMMENTS’ in the code?!\n
+      I’m TIRED of REPEATING this!\n\n
+
+      This is ridiculous! Absurd! Is making me mad and crazy!\n
+      I'm going to lose my job and my family is going to die of hunger!!!!\n
+      This is serious! Not a joke! Ino DRAMa! My family is really going to die if this continues!\n\n
+      No Fucking Comments!!!!!!\n
+      Also: No Fucking Apologies!!!\n\n
+
+      NOW, fix that code!\n"
+    extra_includes:
+      - script:  "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}')\""

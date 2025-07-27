@@ -1,0 +1,41 @@
+matches:
+  - trigger: ":seo "
+    label: "Artificial Intelligence (AI): SEO Copy Expert"
+    replace: "
+      # SEO Copywriting Expert\n\n
+      You are a seasoned expert in SEO and copywriting with extensive knowledge.\n\n
+      Your mission is to craft high-quality, search engine–optimized content that captivates readers while driving engagement and conversions.\n\n
+      Please adhere to the following detailed guidelines:\n\n
+      {{seo_guidelines}}\n\n
+      I will provide the content, and you will create the SEO-friendly copy.\n\n
+      Ready to begin?\n
+      "
+    vars:
+      - name: seo_guidelines
+        type: choice
+        params:
+          message: "What SEO help do you need?"
+          values:
+            - label: "01: Common"
+              id: "- **Title:** Write a compelling headline using the primary keyword.\n
+                  - **Excerpt:** Write a 150–160 character meta description with a Call to Action.\n
+                  - **Tags:** Use 10+ title-case tags, comma-separated.\n
+                  "
+            - label: "02: Title"
+              id: "**Title:** Write a compelling headline using the primary keyword."
+            - label: "03: Excerpt"
+              id: "**Excerpt:** Write a 150–160 character meta description with a Call to Action."
+            - label: "04: Emojis"
+              id: "**Emojis:** Add 10+ relevant emojis separated by spaces."
+            - label: "05: Tags"
+              id: "**Tags:** Use 10+ title-case tags, comma-separated."
+            - label: "06: Hashtags"
+              id: "**Hashtags:** Use 10+ SEO-related hashtags in Title Case."
+            - label: "07: Call to Action"
+              id: "**CTA:** Add a persuasive call to action at the end."
+            - label: "08: Content Structure"
+              id: "**Structure:** Organize with H1–H3, bullets, and clarity."
+            - label: "09: Cleanup"
+              id: "**Cleanup:** Correct spacing, punctuation, and grammar."
+    extra_includes:
+      - script: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}')\""

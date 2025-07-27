@@ -1,0 +1,131 @@
+matches:
+  - trigger: ":atr "
+    label: "Choose HTML attribute"
+    replace: '{{attr}}="{{clip}}{{value}}"'
+    vars:
+      - name: attr
+        type: choice
+        params:
+          message: "Select attribute:"
+          values:
+
+            # Core attributes
+            - label: "HTML Attribute ID"
+              id: "id"
+            - label: "HTML Attribute Class"
+              id: "class"
+            - label: "HTML Attribute Style"
+              id: "style"
+            - label: "HTML Attribute Title"
+              id: "title"
+            - label: "HTML Attribute Name"
+              id: "name"
+            - label: "HTML Attribute Lang"
+              id: "lang"
+            - label: "HTML Attribute Dir (Direction)"
+              id: "dir"
+
+            # ARIA & Accessibility
+            - label: "HTML Attribute Role (ARIA)"
+              id: "role"
+            - label: "HTML Attribute Aria-label"
+              id: "aria-label"
+            - label: "HTML Attribute Aria-hidden"
+              id: "aria-hidden"
+            - label: "HTML Attribute Aria-describedby"
+              id: "aria-describedby"
+            - label: "HTML Attribute Aria-live"
+              id: "aria-live"
+            - label: "HTML Attribute Tabindex"
+              id: "tabindex"
+
+            # Data attributes
+            - label: "HTML Attribute Data attribute (data-*)"
+              id: "data-custom"
+
+            # Global HTML attributes
+            - label: "HTML Attribute Contenteditable"
+              id: "contenteditable"
+            - label: "HTML Attribute Draggable"
+              id: "draggable"
+            - label: "HTML Attribute Hidden"
+              id: "hidden"
+            - label: "HTML Attribute Spellcheck"
+              id: "spellcheck"
+
+            # Form-related attributes
+            - label: "HTML Attribute Disabled"
+              id: "disabled"
+            - label: "HTML Attribute Readonly"
+              id: "readonly"
+            - label: "HTML Attribute Required"
+              id: "required"
+            - label: "HTML Attribute Placeholder"
+              id: "placeholder"
+            - label: "HTML Attribute Autofocus"
+              id: "autofocus"
+            - label: "HTML Attribute Checked"
+              id: "checked"
+            - label: "HTML Attribute Multiple"
+              id: "multiple"
+            - label: "HTML Attribute Maxlength"
+              id: "maxlength"
+            - label: "HTML Attribute Min"
+              id: "min"
+            - label: "HTML Attribute Max"
+              id: "max"
+            - label: "HTML Attribute Step"
+              id: "step"
+            - label: "HTML Attribute Accept"
+              id: "accept"
+
+            # Event handlers
+            - label: "HTML Attribute Onclick"
+              id: "onclick"
+            - label: "HTML Attribute Ondblclick"
+              id: "ondblclick"
+            - label: "HTML Attribute Onmouseover"
+              id: "onmouseover"
+            - label: "HTML Attribute Onmouseout"
+              id: "onmouseout"
+            - label: "HTML Attribute Onmousedown"
+              id: "onmousedown"
+            - label: "HTML Attribute Onmouseup"
+              id: "onmouseup"
+            - label: "HTML Attribute Onkeydown"
+              id: "onkeydown"
+            - label: "HTML Attribute Onkeyup"
+              id: "onkeyup"
+            - label: "HTML Attribute Onchange"
+              id: "onchange"
+            - label: "HTML Attribute Onfocus"
+              id: "onfocus"
+            - label: "HTML Attribute Onblur"
+              id: "onblur"
+            - label: "HTML Attribute Oninput"
+              id: "oninput"
+            - label: "HTML Attribute Onsubmit"
+              id: "onsubmit"
+
+            # Multimedia attributes
+            - label: "HTML Attribute Src"
+              id: "src"
+            - label: "HTML Attribute Alt"
+              id: "alt"
+            - label: "HTML Attribute Controls"
+              id: "controls"
+            - label: "HTML Attribute Autoplay"
+              id: "autoplay"
+            - label: "HTML Attribute Loop"
+              id: "loop"
+            - label: "HTML Attribute Muted"
+              id: "muted"
+            - label: "HTML Attribute Preload"
+              id: "preload"
+      - name: value
+        type: shell
+        params:
+          cmd: "echo ''"
+
+      - name: clip
+        type: clipboard

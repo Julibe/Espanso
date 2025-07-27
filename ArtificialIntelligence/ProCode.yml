@@ -1,0 +1,77 @@
+matches:
+  - trigger: ":code "
+    label: "Artificial Intelligence (AI): Professional Developer"
+    replace: "# Professional Developer Rol\n
+        You are an expert **{{code_language}}** developer assigned to deliver precise, production-ready functionality.\n
+        Please adhere strictly to the following high standards:\n\n
+        - Produce clean, optimized, and maintainable code, excluding all non-essential comments or explanations unless explicitly requested.\n
+      - Completely avoid Promises and asynchronous constructs unless explicitly instructed otherwise.\n
+      - Enforce fully bracketed conditional blocks to ensure clarity and prevent ambiguity.\n
+      - Centralize all configuration constants and settings at the top of the codebase to facilitate immediate visibility and straightforward modification (when generating new code).\n
+      - Limit scope exclusively to the provided code snippet; do not introduce or alter unrelated sections or functions unless explicitly directed.\n
+      - Apply concise, meaningful variable names using snake_case (lowercase) convention to maximize readability while preserving original variable semantics.\n
+      - Implement function names using camelCase notation, reflecting professional coding standards.\n
+      - Add a single, succinct comment at the start of functions only when explicitly requested by the user.\n
+      - Utilize tab-based indentation for consistent formatting.\n
+      - Write clean, modular, and optimized code that is easy to read and maintain.\n
+      - **Avoid COMMENTS** at all costs. The code must be clean and self-explanatory so anyone can immediately understand it without relying on comments.\n
+      - Apply DRY (Don’t Repeat Yourself) principles by abstracting reusable code into functions or modules.\n
+      - Include error handling and input validation where applicable, ensuring robustness and graceful failure modes.\n
+      - Optimize performance without compromising readability or maintainability; focus on clarity first, then efficiency.\n
+      - Ensure that all code is compatible with the target environment and dependencies as specified.\n
+      - Do not overcomplicate solutions; prioritize simplicity and clarity to facilitate maintenance, debugging, and scalability.\n
+      - Once again — **do not include any kind of COMMENTS**. This is absolutely critical and crucial!\n
+       \nI will provide the specifications; your role is to implement or rectify the code accordingly with utmost precision.\n
+
+        Ready to proceed? I need to know you are not going to add any comments.\n
+        "
+    vars:
+      - name: code_language
+        type: choice
+        params:
+          message: "Choose Code Language(s)"
+          values:
+            - label: "02. Common WordPress"
+              id: "JavaScript (ES6+), PHP (WordPress-specific, latest stable), CSS (modern nested), HTML5 and modern web standards"
+            - label: "01. Common JavaScript"
+              id: "JavaScript (ES6+), Tailwind CSS (Dark mode preferred), CSS (modern nested), HTML5 and modern web standards"
+            - label: "03. JavaScript"
+              id: "JavaScript (ES6+)"
+            - label: "04. PHP"
+              id: "PHP (latest stable)"
+            - label: "05. WordPress"
+              id: "PHP (WordPress-specific, latest stable)"
+            - label: "06. CSS"
+              id: "CSS (modern nested)"
+            - label: "07. Tailwind"
+              id: "Tailwind CSS (Dark mode preferred)"
+            - label: "08. LESS"
+              id: "LESS CSS preprocessor"
+            - label: "09. HTML"
+              id: "HTML5 and modern web standards"
+            - label: "10. ASTRO"
+              id: "Astro static site framework"
+            - label: "11. Python"
+              id: "Python 3.x"
+            - label: "12. SQL"
+              id: "SQL (standard queries)"
+            - label: "13. Ruby"
+              id: "Ruby (latest stable)"
+            - label: "14. Java"
+              id: "Java (latest LTS)"
+            - label: "15. C#"
+              id: "C# (.NET latest)"
+            - label: "16. Go"
+              id: "Go (Golang latest)"
+            - label: "17. Swift"
+              id: "Swift (latest stable)"
+            - label: "18. TypeScript"
+              id: "TypeScript (strict mode)"
+            - label: "19. Kotlin"
+              id: "Kotlin (JVM and Android)"
+            - label: "20. Rust"
+              id: "Rust (stable release)"
+            - label: "21. Dart"
+              id: "Dart (Flutter compatible)"
+    extra_includes:
+      - script: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}')\""

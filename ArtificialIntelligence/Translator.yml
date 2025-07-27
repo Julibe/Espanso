@@ -1,0 +1,21 @@
+matches:
+  - trigger: ":trans "
+    label: "Artificial Intelligence (AI): Translator"
+    replace: "
+     You are an expert in copywriting.\n\n
+     Your task is to translate the following text into **{{selected_language}}**, ensuring that the tone, style, and message remain true to the original while adapting to the cultural and linguistic nuances of the selected region.\n\n
+     Use clear and persuasive language that resonates with your chosen audience.\n\n
+     Ready to begin?\n
+    "
+    vars:
+      - name: selected_language
+        type: choice
+        params:
+          message: "Translator - Choose Language"
+          values:
+            - label: "01: English"
+              id: "American English"
+            - label: "02: Español"
+              id: "Latin American Spanish (Español LATAM)"
+    extra_includes:
+      - script: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}')\""

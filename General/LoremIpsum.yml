@@ -1,0 +1,19 @@
+matches:
+  - trigger: ":lorem "
+    label: "Lorem ipsum (Paragraph)"
+    replace: "
+     Cras maximus, arcu id semper scelerisque, sem risus finibus leo, eu imperdiet metus leo eget diam. Ut nec diam et tortor varius tincidunt.\n
+     Vestibulum cursus pretium nulla, quis consectetur orci iaculis ut. Fusce euismod tincidunt sapien, vitae volutpat eros facilisis sed.\n
+     Morbi ultricies varius ipsum, eget sagittis erat pretium et.\n
+     Duis sit amet leo id tortor porta elementum. Proin commodo lectus in metus elementum, eu tempus enim tristique. Duis faucibus, tortor quis tincidunt viverra, urna dui commodo ligula, et semper lacus nibh ac lacus.\n
+    "
+  - trigger: ":lor "
+    label: "Lorem ipsum (Sentence)"
+    replace: "Vestibulum cursus pretium nulla, quis consectetur orci iaculis ut, sed facilisis eros volutpat vitae.\n"
+  - trigger: ":loremipsum "
+    label: "Lorem ipsum (Page)"
+    replace: "
+      Suspendisse potenti. Suspendisse in eleifend purus, at ultricies nibh. Aliquam luctus rhoncus purus, a lacinia augue placerat in. Aenean at mauris id leo vestibulum aliquam eu sit amet lorem. Aliquam fermentum nec augue molestie vestibulum. Phasellus vulputate vehicula nisi, ut auctor eros hendrerit sit amet. Etiam a risus et leo malesuada aliquet. Sed quis tincidunt mauris, eu porta libero. Nunc mauris diam, mattis ut urna ut, fringilla dictum nisl. Maecenas iaculis luctus placerat. Donec tempor volutpat turpis. Maecenas sed lectus malesuada, finibus libero quis, faucibus mauris. Integer rutrum, urna sit amet pretium imperdiet, velit ex vehicula arcu, quis blandit nunc mi quis neque. Duis in pulvinar metus, non ultricies nunc. Integer nec urna at purus tristique sagittis varius eget turpis.\n\n
+      Suspendisse lobortis mi nec urna rhoncus, quis elementum justo cursus. Aenean bibendum tincidunt bibendum. Curabitur pretium velit ac mi facilisis cursus. Ut non nisl eget dolor pellentesque commodo sit amet vel mi. Proin malesuada elementum rutrum. Mauris molestie lacus nisl, eu placerat metus pharetra nec. Vestibulum ac ex facilisis, facilisis arcu eget, cursus neque. Donec nec varius neque. Integer lacinia tempus ex, vel finibus nibh malesuada a.\n\n
+      Mauris et feugiat magna. Suspendisse lobortis faucibus felis, a volutpat massa. Morbi lacinia ultrices leo, semper auctor ex. Nunc gravida suscipit tristique. Nullam posuere condimentum turpis, quis tincidunt eros. Aliquam pretium mattis dictum. Donec euismod lectus ut elit auctor fringilla non nec nisi. Nulla vestibulum auctor augue et aliquet. Quisque nibh est, gravida in quam id, auctor cursus magna. Phasellus at sem sed turpis ultricies viverra. Vivamus fermentum vestibulum est a fermentum. Aenean ut ante scelerisque, euismod metus id, suscipit tortor.\n
+    "

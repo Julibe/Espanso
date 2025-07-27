@@ -1,0 +1,80 @@
+matches:
+  - trigger: ":date "
+    label: "Time: Insert date or year"
+    replace: "{{date_or_year}}"
+    vars:
+      - name: date_ddmmyyyy
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $d = Get-Date
+            Write-Output ($d.ToString("dd/MM/yyyy"))
+
+      - name: date_mmddyy
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $d = Get-Date
+            Write-Output ($d.ToString("MM/dd/yy"))
+
+      - name: date_ddmmyyyy_en
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $d = Get-Date
+            Write-Output ($d.ToString("dddd, dd MMMM yyyy", [System.Globalization.CultureInfo]::GetCultureInfo("en-US")))
+
+      - name: date_ddmmyyyy_es
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $d = Get-Date
+            Write-Output ($d.ToString("dddd, dd MMMM yyyy", [System.Globalization.CultureInfo]::GetCultureInfo("es-ES")))
+
+      - name: date_mmddyy_en
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $d = Get-Date
+            Write-Output ($d.ToString("dddd, MMMM dd, yy", [System.Globalization.CultureInfo]::GetCultureInfo("en-US")))
+
+      - name: date_mmddyy_es
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $d = Get-Date
+            Write-Output ($d.ToString("dddd, MMMM dd, yy", [System.Globalization.CultureInfo]::GetCultureInfo("es-ES")))
+
+      - name: year
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $y = Get-Date
+            Write-Output ($y.ToString("yyyy"))
+
+      - name: date_or_year
+        type: choice
+        params:
+          message: "Choose date or year format:"
+          values:
+            - label: "Time: 01: Date ({{date_ddmmyyyy}})"
+              id: "{{date_ddmmyyyy}}"
+            - label: "Time: {{date_mmddyy}}"
+              id: "{{date_mmddyy}}"
+            - label: "Time: {{date_ddmmyyyy_en}}"
+              id: "{{date_ddmmyyyy_en}}"
+            - label: "Time: {{date_ddmmyyyy_es}}"
+              id: "{{date_ddmmyyyy_es}}"
+            - label: "Time: {{date_mmddyy_en}}"
+              id: "{{date_mmddyy_en}}"
+            - label: "Time: {{date_mmddyy_es}}"
+              id: "{{date_mmddyy_es}}"
+            - label: "Time: 00: Year ({{year}})"
+              id: "{{year}}"

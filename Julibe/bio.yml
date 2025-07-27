@@ -1,0 +1,38 @@
+matches:
+  - trigger: ":bio "
+    label: "Julibe: Biography"
+    replace: "{{bio}}"
+    vars:
+      - name: years
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $startYear = 2008
+            $currentYear = (Get-Date).Year
+            Write-Output ($currentYear - $startYear)
+      - name: bio
+        type: choice
+        params:
+          message: "Choose Biography"
+          values:
+            - label: "01: Short"
+              id: >
+                Hi! I’m Julibe 👻
+                A supercool Designer with +{{years}} years of experience in web, apps, UX/UI, VR, AR, and AI.
+                Lover of sci-fi, TV, anime, and a pro at game overs since the '90s! 🕹️
+            - label: "02: Professional"
+              id: >
+                Meet **Julián Alberto De Salvador Castañeda**, better known as **Julibe**, a highly accomplished freelance **designer and developer** based in Bogotá.
+                His main focus revolves around __crafting digital solutions__, aiming to elevate his clients' online presence through innovative design and cutting-edge technology.
+            - label: "03: Short (Spanish)"
+              id: >
+                ¡Hola! Soy Julibe 👻
+                Un excelente diseñador con más de +{{years}} años de experiencia en web, apps, UX/UI, VR, AR y AI.
+                Amante de la ciencia ficción, la TV, el anime y todo un experto en "game overs" desde los 90s... 🕹️
+            - label: "04: Professional (Spanish)"
+              id: >
+                Conoce a **Julián Alberto De Salvador Castañeda**, mejor conocido como **Julibe**, un destacado **diseñador y desarrollador** freelance con sede en Bogotá.
+                Su enfoque principal es __crear soluciones digitales__ que buscan mejorar la presencia en línea de sus clientes a través de un diseño innovador y tecnología de vanguardia.
+    on_trigger: >
+      powershell -Command "Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}'); [System.Windows.Forms.SendKeys]::SendWait('^~')"

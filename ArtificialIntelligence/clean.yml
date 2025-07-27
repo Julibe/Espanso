@@ -1,0 +1,14 @@
+matches:
+  - trigger: ":clean "
+    label: "Artificial Intelligence (AI): Clean Code"
+    replace: |
+      Make the Code Easier to Read
+
+      Write code so anyone can immediately understand what’s happening
+      It should be understandable without relying on comments.
+
+      Use simple functionCase for all functions and code_case for all variables.
+      Keep functions and variables short, clear, and self-explanatory.
+
+      NOW, fix that code!
+    on_trigger: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}')\""

@@ -1,0 +1,34 @@
+matches:
+  - trigger: ":social "
+    label: "Julibe: Social Links"
+    replace: "{{social_link}}"
+    vars:
+      - name: social_link
+        type: choice
+        params:
+          message: "Choose a social or contact link:"
+          values:
+            - label: "GitHub"
+              id: "https://github.com/Julibe"
+            - label: "LinkedIn"
+              id: "https://linkedin.com/in/julibe"
+            - label: "WhatsApp"
+              id: "https://wa.me/+573125837936"
+            - label: "Telegram"
+              id: "https://telegram.me/JulibeDS"
+            - label: "YouTube"
+              id: "https://youtube.com/@Julibe"
+            - label: "Pinterest"
+              id: "https://pinterest.com/julibertous"
+            - label: "Instagram"
+              id: "https://instagram.com/julibe"
+            - label: "Facebook"
+              id: "https://facebook.com/julibeDS"
+            - label: "Twitter"
+              id: "https://twitter.com/julibe"
+            - label: "Dribbble"
+              id: "https://dribbble.com/Julibe"
+            - label: "Website"
+              id: "https://julibe.com/"
+            - label: "E-mail"
+              id: "mail@julibe.com"
