@@ -1,0 +1,215 @@
+matches:
+  - trigger: "_up "
+    label: "Change Case: UPPERCASE"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: "Get-Clipboard | ForEach-Object { $_.ToUpper() }"
+
+  - trigger: "_lo "
+    label: "Change Case: lowercase"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: "Get-Clipboard | ForEach-Object { $_.ToLower() }"
+
+  - trigger: "_ti "
+    label: "Change Case: Title Case"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $words = $t -split ' '
+            $title = $words | ForEach-Object {
+              if ($_ -ne '') {
+                $_.Substring(0,1).ToUpper() + $_.Substring(1).ToLower()
+              }
+            }
+            $title -join ' '
+
+  - trigger: "_se "
+    label: "Change Case: Sentence Case"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $regex = '(?<=[.?!]\s)(\w)'
+            $t = $t.ToLower()
+            $t = $t.Substring(0,1).ToUpper() + $t.Substring(1)
+            $t = [regex]::Replace($t, $regex, { param($m) $m.Value.ToUpper() })
+            $t
+
+  - trigger: "_f "
+    label: "Change Case: camelCase (Function Name)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $words = $t.Split(' ')
+            $first = $words[0].ToLower()
+            $rest = $words[1..($words.Length - 1)] | ForEach-Object { $_.Substring(0,1).ToUpper() + $_.Substring(1).ToLower() }
+            Write-Output ($first + ($rest -join ''))
+
+  - trigger: "_c "
+    label: "Change Case: snake_case (Code Variable)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $s = $t.ToLower() -replace '[^a-z0-9]+','_'
+            Write-Output ($s.Trim('_'))
+
+  - trigger: "_sl "
+    label: "Change Case: slug-case"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $t = $t.ToLower() -replace '[^a-z0-9\s]', ''
+            $t = $t -replace '\s+', '-'
+            $t.Trim('-')
+
+  - trigger: "_n "
+    label: "Clean Text: Remove new lines"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $t = $t -replace "(\r|\n)+", " "
+            $t = $t -replace '\s+', ' '
+            $t = $t.Trim()
+            $t
+
+  - trigger: "_clean "
+    label: "Clean Text: Remove punctuation"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $t = $t -replace '[.,;:\-_]', ' '
+            $t = $t -replace '[^\w\s]', ''
+            $t = $t -replace '\s+', ' '
+            $t = $t.Trim()
+            $t
+
+  - trigger: "_s "
+    label: "Clean Text: Remove extra spaces"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $t = $t -replace '\s+', ' '
+            $t = $t.Trim()
+            $t
+
+  - trigger: "_br "
+    label: "Clean HTML: Remove br tags"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $t = $t -replace '<br\s*/?>', ' '
+            $t = $t -replace "(\r|\n)+", ' '
+            $t = $t -replace '\s+', ' '
+            $t = $t.Trim()
+            $t
+
+  - trigger: "_count "
+    label: "Text: Clipboard Info"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $words = ($t -split '\s+' | Where-Object { $_ -ne '' }).Count
+            $chars = $t.Length
+            $lines = ($t -split "(\r?\n)").Count
+            $readingTime = [math]::Ceiling($words / 200)
+            "Words: $words | Characters: $chars | Lines: $lines | Est. Reading Time: $readingTime min"
+
+  - trigger: "_qd "
+    label: "Text: Convert double quotes"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $t = $t -replace '`', '"'
+            $t = $t -replace "'", '"'
+            $t
+
+  - trigger: "_q "
+    label: "Text: Convert single quotes"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $t = $t -replace '`', "'"
+            $t = $t -replace '"', "'"
+            $t
+
+  - trigger: "_qr "
+    label: "Text: Convert quotes to backticks ( Reverse Quotes ` )"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          shell: powershell
+          cmd: |
+            $t = Get-Clipboard
+            $t = $t -replace '"', '`'
+            $t = $t -replace "'", '`'
+            $t
