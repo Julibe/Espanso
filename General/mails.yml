@@ -1,0 +1,97 @@
+matches:
+  - trigger: ":cu "
+    label: "Email: Cuenta de Cobro"
+    replace: |
+      Buen día, reciban un cordial saludo.
+
+      Por medio del presente correo electrónico,
+      me permito adjuntar la cuenta de cobro correspondiente,
+      junto a los documentos relacionados con la Certificación de Aportes de Salud, la Certificación Tributaria y el RUT (Registro Único Tributario),
+      todos debidamente actualizados.
+
+      Dichos documentos detallan las actividades realizadas y los costos asociados al proyecto:
+
+      Cuenta de Cobro ({{year}})
+
+      Agradezco su atención y quedo a disposición para ampliar cualquier información que consideren necesaria
+      o brindar cualquier soporte requerido durante el proceso.
+
+      Cordial saludo,
+    vars:
+      - name: year
+        type: shell
+        params:
+          cmd: "(Get-Date).Year"
+
+
+
+  - trigger: ":invoice "
+    label: "Email: invoice"
+    replace: |
+      Good day, and warm regards.
+
+      Through this email,
+      please find attached the corresponding invoice,
+      along with documents relating to the Health Contribution Certification, Tax Certification, and RUT (Tax ID),
+      all duly updated.
+
+      These documents detail the activities performed and the costs associated with the project:
+
+      Invoice ({{year}})
+
+      Thank you for your attention.
+      Please let me know if you require any further information or assistance during this process.
+
+      Best regards,
+      Sincerely,
+
+
+    vars:
+      - name: year
+        type: shell
+        params:
+          cmd: "(Get-Date).Year"
+
+  - trigger: ":quote "
+    label: "Email: Quotation"
+    replace: |
+      Good day, and warm regards.
+
+      Through this email,
+      please find attached the corresponding quote for the project:
+
+      Quote ({{year}})
+
+      Thank you for your attention.
+      Please let me know if you require any further information or assistance during this process.
+
+      Best regards,
+      Sincerely,
+    vars:
+      - name: year
+        type: shell
+        params:
+          cmd: "(Get-Date).Year"
+
+
+
+
+  - trigger: ":cot "
+    label: "Email: Cotización"
+    replace: |
+      Buen día, reciban un cordial saludo.
+
+      Por medio del presente correo electrónico,
+      me permito adjuntar la cotización correspondiente para el proyecto:
+
+      Cotización ({{year}})
+
+      Agradezco su atención y quedo a disposición para ampliar cualquier información que consideren necesaria
+      o brindar cualquier soporte requerido durante el proceso.
+
+      Cordial saludo,
+    vars:
+      - name: year
+        type: shell
+        params:
+          cmd: "(Get-Date).Year"
