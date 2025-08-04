@@ -1,5 +1,9 @@
 matches:
-  - trigger: ":designer"
+  - triggers:
+    - "des_ "
+    - ":des "
+    - "designer_ "
+    - ":designer "
     label: "Artificial Intelligence (AI): Professional Designer"
     replace: "
       You are an expert graphic designer with expertise in creating visually compelling designs across various mediums.

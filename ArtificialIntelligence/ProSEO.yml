@@ -1,5 +1,7 @@
 matches:
-  - trigger: ":seo "
+  - triggers:
+    - "seo_ "
+    - ":seo "
     label: "Artificial Intelligence (AI): SEO Copy Expert"
     replace: "
       # SEO Copywriting Expert\n\n

@@ -1,5 +1,9 @@
 matches:
-  - trigger: ":com "
+  - triggers:
+    - "com_ "
+    - ":com "
+    - "no_comments_ "
+    - ":no_comments "
     label: "Artificial Intelligence (AI): No Comments Angry!"
     replace:
       "Do not include any COMMENTS in the code.\n
@@ -10,7 +14,10 @@ matches:
     extra_includes:
       - script: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}'); [System.Windows.Forms.SendKeys]::SendWait('^~')\""
 
-  - trigger: ":c "
+
+  - triggers:
+    - "c_ "
+    - ":c_ "
     label: "Artificial Intelligence (AI): No Comments!"
     replace:
       "No comments in the code! NO COMMENTS!! "
@@ -18,14 +25,20 @@ matches:
       - script: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}'); [System.Windows.Forms.SendKeys]::SendWait('^~')\""
 
 
-  - trigger: ":cc "
+  - triggers:
+    - "cc_ "
+    - ":cc_ "
+    - "com!"
     label: "Artificial Intelligence (AI): I said no comments!"
     replace:
       "I said comments in the code! NO COMMENTS!! NO COMMENTS!! NO COMMENTS!!!!!!!!!! "
     extra_includes:
       - script: "powershell -Command \"Start-Sleep -Milliseconds 100; [System.Windows.Forms.SendKeys]::SendWait('^{ENTER}'); [System.Windows.Forms.SendKeys]::SendWait('^~')\""
 
-  - trigger: ":ccc "
+  - triggers:
+    - "ccc_ "
+    - ":ccc_ "
+    - "fuckcom"
     label: "Artificial Intelligence (AI): No Comments Serious!"
     replace:
       "No comments!

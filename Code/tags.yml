@@ -1,286 +1,400 @@
 matches:
-  - trigger: ":div "
+  - triggers:
+      - ":div "
+      - "div_ "
     label: "HTML DIV"
     replace: "<div>{{clip}}</div>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":span "
+  - triggers:
+      - ":span "
+      - "span_ "
     label: "HTML SPAN"
     replace: "<span>{{clip}}</span>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":img "
+  - triggers:
+      - ":img "
+      - "img_ "
     label: "HTML Image"
     replace: '<img src="{{clip}}" alt="" />'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":br "
+  - triggers:
+      - ":br "
+      - "br_ "
     label: "HTML Line break"
     replace: "<br/>"
 
-  - trigger: ":strong "
+  - triggers:
+      - ":str "
+      - "str_ "
+      - ":strong "
+      - "strong_ "
     label: "HTML Bold text"
     replace: "<strong>{{clip}}</strong>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":em "
+  - triggers:
+      - ":em "
+      - "em_ "
     label: "HTML Italic text"
     replace: "<em>{{clip}}</em>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":co "
+  - triggers:
+      - ":code "
+      - "code_ "
     label: "HTML Code block"
     replace: "<code><pre>{{clip}}</pre></code>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":pre "
+  - triggers:
+      - ":pre "
+      - "pre_ "
     label: "HTML Preformatted text"
     replace: "<pre>{{clip}}</pre>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":quote "
+  - triggers:
+      - ":quote "
+      - "quote_ "
+      - "quo_ "
+      - "quot_ "
     label: "HTML Blockquote"
     replace: "<blockquote>{{clip}}</blockquote>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":sect "
+  - triggers:
+      - ":sect "
+      - "sect_ "
+      - ":section "
+      - "section_ "
     label: "HTML Section"
     replace: "<section>\n  {{clip}}\n</section>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":a "
-    label: "HTML Article"
+  - triggers:
+      - ":a "
+      - "a_ "
+    label: "HTML Anchor"
     replace: "<a href=\"\" target=\"\"  title=\"\" aria-label=\"\">\n  {{clip}}\n</a>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":art"
+  - triggers:
+      - ":art "
+      - "art_ "
+      - ":article "
+      - "article_ "
     label: "HTML Article"
     replace: "<article>\n  {{clip}}\n</article>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":foot "
+  - triggers:
+      - ":foot "
+      - "foot_ "
+      - ":footer "
+      - "footer_ "
     label: "HTML Footer"
     replace: "<footer>\n  {{clip}}\n</footer>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":header "
+  - triggers:
+      - ":header "
+      - "header_ "
     label: "HTML Header"
     replace: "<header>\n  {{clip}}\n</header>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":head "
+  - triggers:
+      - ":head "
+      - "head_ "
     label: "HTML Head"
     replace: "<head>\n  {{clip}}\n</head>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":nav "
+  - triggers:
+      - ":nav "
+      - "nav_ "
     label: "HTML Navigation"
     replace: "<nav>\n  {{clip}}\n</nav>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":meta "
+  - triggers:
+      - ":meta "
+      - "meta_ "
     label: "HTML Meta"
     replace: '<meta name="description" content="{{clip}}" />'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":css "
+  - triggers:
+      - ":css "
+      - "css_ "
     label: "HTML Class attribute"
     replace: 'class="{{clip}}"'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":id "
+  - triggers:
+      - ":id "
+      - "id_ "
     label: "HTML ID attribute"
     replace: 'id="{{clip}}"'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":data "
+  - triggers:
+      - ":data "
+      - "data_ "
     label: "HTML Data attribute"
     replace: 'data-="{{clip}}"'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":st "
+  - triggers:
+      - ":sty "
+      - "sty_ "
     label: "HTML Style attribute"
     replace: 'style="{{clip}}"'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":aria "
+  - triggers:
+      - ":aria "
+      - "aria_ "
     label: "HTML ARIA attribute"
     replace: 'aria-label="{{clip}}"'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":button "
+  - triggers:
+      - ":button "
+      - "button_ "
+      - ":btn "
+      - "btn_ "
     label: "HTML Button"
     replace: "<button>{{clip}}</button>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":input "
+  - triggers:
+      - ":input "
+      - "input_ "
+      - ":inp "
+      - "inp_ "
     label: "HTML Input"
     replace: '<input type="text" value="{{clip}}" />'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":textarea "
+  - triggers:
+      - ":textarea "
+      - "textarea_ "
+      - ":text "
+      - "text_ "
+      - ":txt "
+      - "txt_ "
     label: "HTML Textarea"
     replace: "<textarea>{{clip}}</textarea>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":label "
+  - triggers:
+      - ":label "
+      - "label_ "
+      - ":lab "
+      - "lab_ "
     label: "HTML Label"
     replace: "<label>{{clip}}</label>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":form "
+  - triggers:
+      - ":form "
+      - "form_ "
     label: "HTML Form"
     replace: "<form>\n  {{clip}}\n</form>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":main "
+  - triggers:
+      - ":main "
+      - "main_ "
     label: "HTML Main"
     replace: "<main>\n  {{clip}}\n</main>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":summary "
+  - triggers:
+      - ":summary "
+      - "summary_ "
+      - ":sum "
+      - "sum_ "
     label: "HTML Summary"
     replace: "<summary>{{clip}}</summary>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":svg "
+  - triggers:
+      - ":svg "
+      - "svg_ "
     label: "HTML SVG"
     replace: "<svg>{{clip}}</svg>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":title "
+  - triggers:
+      - ":title "
+      - "title_ "
+      - ":tit "
+      - "tit_ "
     label: "HTML Title"
     replace: "<title>{{clip}}</title>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":alt "
+  - triggers:
+      - ":alt "
+      - "alt_ "
     label: "HTML Alt attribute"
     replace: 'alt="{{clip}}"'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":src "
+  - triggers:
+      - ":src "
+      - "src_ "
     label: "HTML Src attribute"
     replace: 'src="{{clip}}"'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":href "
+  - triggers:
+      - ":href "
+      - "href_ "
     label: "HTML Href attribute"
     replace: 'href="{{clip}}"'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":iframe "
+  - triggers:
+      - ":iframe "
+      - "iframe_ "
+      - ":ifr "
+      - "ifr_ "
     label: "HTML Iframe"
     replace: '<iframe src="{{clip}}" frameborder="0"></iframe>'
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":ul "
+  - triggers:
+      - ":ul "
+      - "ul_ "
     label: "HTML Unordered list"
     replace: "<ul>\n  <li>{{clip}}</li>\n</ul>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":ol "
+  - triggers:
+      - ":ol "
+      - "ol_ "
     label: "HTML Ordered list"
     replace: "<ol>\n  <li>{{clip}}</li>\n</ol>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":li "
+  - triggers:
+      - ":li "
+      - "li_ "
     label: "HTML List item"
     replace: "<li>{{clip}}</li>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":sup "
+  - triggers:
+      - ":sup "
+      - "sup_ "
+      - ":sp "
+      - "sp_ "
     label: "HTML Superscript"
     replace: "<sup>{{clip}}</sup>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":sub "
+  - triggers:
+      - ":sub "
+      - "sub_ "
+      - ":sb "
+      - "sb_ "
     label: "HTML Subscript"
     replace: "<sub>{{clip}}</sub>"
     vars:
       - name: clip
         type: clipboard
 
-  - trigger: ":hr "
+  - triggers:
+      - ":hr "
+      - "hr_ "
     label: "HTML Horizontal rule"
     replace: "<hr />"
 
-  - trigger: ":link "
+  - triggers:
+      - ":link "
+      - "link_ "
     label: "HTML Link tag (CSS)"
     replace: '<link rel="stylesheet" href="{{clip}}" />'
     vars:

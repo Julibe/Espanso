@@ -1,5 +1,9 @@
 matches:
-  - trigger: ":trans "
+  - triggers:
+    - "trans_ "
+    - ":trans "
+    - "translator_ "
+    - ":translator "
     label: "Artificial Intelligence (AI): Translator"
     replace: "
      You are an expert in copywriting.\n\n

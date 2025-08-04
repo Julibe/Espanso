@@ -1,5 +1,11 @@
   matches:
-    - trigger: ":copy "
+    - triggers:
+      - "copy_ "
+      - ":copy_ "
+      - "copywriter_ "
+      - ":copywriter "
+      - "pro_ "
+      - ":pro "
       label: "Artificial Intelligence (AI):Copywriting Transformer"
       replace: "
        You are an expert in copywriting.\n\n

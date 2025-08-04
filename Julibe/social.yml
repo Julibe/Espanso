@@ -1,5 +1,5 @@
 matches:
-  - trigger: ":social "
+  - trigger: ":social_ "
     label: "Julibe: Social Links"
     replace: "{{social_link}}"
     vars:

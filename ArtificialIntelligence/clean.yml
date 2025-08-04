@@ -1,5 +1,9 @@
 matches:
-  - trigger: ":clean "
+  - triggers:
+    - "clean_ "
+    - ":clean "
+    - "cl_ "
+    - ":cl "
     label: "Artificial Intelligence (AI): Clean Code"
     replace: |
       Make the Code Easier to Read

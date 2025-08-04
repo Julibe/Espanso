@@ -1,5 +1,7 @@
 matches:
-  - trigger: ":fix "
+  - triggers:
+    - "fix_ "
+    - ":fix "
     label: "Artificial Intelligence (AI): Fix that"
     replace: "{{fix_text}}"
     vars:

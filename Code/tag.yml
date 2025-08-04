@@ -1,5 +1,7 @@
 matches:
-  - trigger: ":tag "
+  - triggers:
+      - ":tag "
+      - "tag_ "
     label: "Choose HTML tag"
     replace: "<{{tag}}>{{clip}}</{{tag}}>"
     vars:

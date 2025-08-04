@@ -1,5 +1,9 @@
 matches:
-  - trigger: ":code "
+  - triggers:
+    - "code_ "
+    - ":code "
+    - "pro_ "
+    - ":pro "
     label: "Artificial Intelligence (AI): Professional Developer"
     replace: "# Professional Developer Rol\n
         You are an expert **{{code_language}}** developer assigned to deliver precise, production-ready functionality.\n

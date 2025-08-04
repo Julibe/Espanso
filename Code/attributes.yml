@@ -1,5 +1,7 @@
 matches:
-  - trigger: ":atr "
+  - triggers:
+      - ":atr "
+      - "atr_ "
     label: "Choose HTML attribute"
     replace: '{{attr}}="{{clip}}{{value}}"'
     vars:

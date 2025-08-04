@@ -1,5 +1,9 @@
 matches:
-  - trigger: "_up "
+  - triggers:
+      - ":up "
+      - "up_ "
+      - ":uppercase "
+      - "uppercase_ "
     label: "Change Case: UPPERCASE"
     replace: "{{output}}"
     vars:
@@ -9,7 +13,12 @@ matches:
           shell: powershell
           cmd: "Get-Clipboard | ForEach-Object { $_.ToUpper() }"
 
-  - trigger: "_lo "
+
+  - triggers:
+      - ":low "
+      - "low_ "
+      - ":lowercase "
+      - "lowercase_ "
     label: "Change Case: lowercase"
     replace: "{{output}}"
     vars:
@@ -19,7 +28,14 @@ matches:
           shell: powershell
           cmd: "Get-Clipboard | ForEach-Object { $_.ToLower() }"
 
-  - trigger: "_ti "
+  - triggers:
+      - ":tit "
+      - "tit_ "
+      - ":title "
+      - "title_ "
+      - ":titlecase "
+      - "titlecase_ "
+
     label: "Change Case: Title Case"
     replace: "{{output}}"
     vars:
@@ -37,7 +53,13 @@ matches:
             }
             $title -join ' '
 
-  - trigger: "_se "
+  - triggers:
+      - ":sent "
+      - "sent_ "
+      - ":sentence "
+      - "sentence_ "
+      - ":first "
+      - "first_ "
     label: "Change Case: Sentence Case"
     replace: "{{output}}"
     vars:
@@ -53,7 +75,12 @@ matches:
             $t = [regex]::Replace($t, $regex, { param($m) $m.Value.ToUpper() })
             $t
 
-  - trigger: "_f "
+
+  - triggers:
+      - ":func "
+      - "func_ "
+      - ":function "
+      - "function_ "
     label: "Change Case: camelCase (Function Name)"
     replace: "{{output}}"
     vars:
@@ -68,7 +95,15 @@ matches:
             $rest = $words[1..($words.Length - 1)] | ForEach-Object { $_.Substring(0,1).ToUpper() + $_.Substring(1).ToLower() }
             Write-Output ($first + ($rest -join ''))
 
-  - trigger: "_c "
+  - triggers:
+      - ":code "
+      - "code_ "
+      - ":var "
+      - "var_ "
+      - ":variable "
+      - "variable_ "
+      - ":snake "
+      - "snake_ "
     label: "Change Case: snake_case (Code Variable)"
     replace: "{{output}}"
     vars:
@@ -81,7 +116,11 @@ matches:
             $s = $t.ToLower() -replace '[^a-z0-9]+','_'
             Write-Output ($s.Trim('_'))
 
-  - trigger: "_sl "
+  - triggers:
+      - ":slug "
+      - "slug_ "
+      - ":dash "
+      - "dash_
     label: "Change Case: slug-case"
     replace: "{{output}}"
     vars:
@@ -95,7 +134,13 @@ matches:
             $t = $t -replace '\s+', '-'
             $t.Trim('-')
 
-  - trigger: "_n "
+  - triggers:
+      - ":new "
+      - "new_ "
+      - ":nl "
+      - "nl_ "
+      - ":newline "
+      - "newline_ "
     label: "Clean Text: Remove new lines"
     replace: "{{output}}"
     vars:
@@ -110,7 +155,13 @@ matches:
             $t = $t.Trim()
             $t
 
-  - trigger: "_clean "
+  - triggers:
+      - ":clean "
+      - "clean_ "
+      - ":cl "
+      - "cl_ "
+      - ":clear "
+      - "clear_ "
     label: "Clean Text: Remove punctuation"
     replace: "{{output}}"
     vars:
@@ -126,7 +177,12 @@ matches:
             $t = $t.Trim()
             $t
 
-  - trigger: "_s "
+  - triggers:
+      - ":space "
+      - "space_ "
+      - ":s "
+      - "s_ "
+    label: "Clean Text: Remove extras "
     label: "Clean Text: Remove extra spaces"
     replace: "{{output}}"
     vars:
@@ -140,7 +196,10 @@ matches:
             $t = $t.Trim()
             $t
 
-  - trigger: "_br "
+
+  - triggers:
+      - "-:br "
+      - "-br_ "
     label: "Clean HTML: Remove br tags"
     replace: "{{output}}"
     vars:
@@ -156,7 +215,12 @@ matches:
             $t = $t.Trim()
             $t
 
-  - trigger: "_count "
+
+  - triggers:
+      - ":count "
+      - "count_ "
+      - ":word "
+      - "word_ "
     label: "Text: Clipboard Info"
     replace: "{{output}}"
     vars:
@@ -172,7 +236,12 @@ matches:
             $readingTime = [math]::Ceiling($words / 200)
             "Words: $words | Characters: $chars | Lines: $lines | Est. Reading Time: $readingTime min"
 
-  - trigger: "_qd "
+
+  - triggers:
+      - ":qd "
+      - "qd_ "
+      - ":double "
+      - "double_ "
     label: "Text: Convert double quotes"
     replace: "{{output}}"
     vars:
@@ -186,7 +255,13 @@ matches:
             $t = $t -replace "'", '"'
             $t
 
-  - trigger: "_q "
+  - triggers:
+      - ":q "
+      - "q_ "
+      - ":single "
+      - "single_ "
+      - ":quote "
+      - "quote_ "
     label: "Text: Convert single quotes"
     replace: "{{output}}"
     vars:
@@ -200,7 +275,11 @@ matches:
             $t = $t -replace '"', "'"
             $t
 
-  - trigger: "_qr "
+  - triggers:
+      - ":qr "
+      - "qr_ "
+      - ":reverse "
+      - "reverse_ "
     label: "Text: Convert quotes to backticks ( Reverse Quotes ` )"
     replace: "{{output}}"
     vars:

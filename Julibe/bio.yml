@@ -1,5 +1,5 @@
 matches:
-  - trigger: ":bio "
+  - trigger: "bio_ "
     label: "Julibe: Biography"
     replace: "{{bio}}"
     vars:

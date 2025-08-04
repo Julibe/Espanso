@@ -1,5 +1,9 @@
 matches:
-  - trigger: ":cu "
+  - triggers:
+      - ":cu "
+      - "cu_ "
+      - ":cuenta "
+      - "cuenta_ "
     label: "Email: Cuenta de Cobro"
     replace: |
       Buen día, reciban un cordial saludo.
@@ -23,9 +27,35 @@ matches:
         params:
           cmd: "(Get-Date).Year"
 
+  - triggers:
+      -  ":cot "
+      - "cot_ "
+      - ":cotizacion "
+      - "cotizacion_ "
+    label: "Email: Cotización"
+    replace: |
+      Buen día, reciban un cordial saludo.
 
+      Por medio del presente correo electrónico,
+      me permito adjuntar la cotización correspondiente para el proyecto:
 
-  - trigger: ":invoice "
+      Cotización ({{year}})
+
+      Agradezco su atención y quedo a disposición para ampliar cualquier información que consideren necesaria
+      o brindar cualquier soporte requerido durante el proceso.
+
+      Cordial saludo,
+    vars:
+      - name: year
+        type: shell
+        params:
+          cmd: "(Get-Date).Year"
+
+  - triggers:
+      - ":invoice "
+      - "invoice_ "
+      - ":inv "
+      - "inv_   "
     label: "Email: invoice"
     replace: |
       Good day, and warm regards.
@@ -45,14 +75,17 @@ matches:
       Best regards,
       Sincerely,
 
-
     vars:
       - name: year
         type: shell
         params:
           cmd: "(Get-Date).Year"
 
-  - trigger: ":quote "
+  - triggers:
+      - ":quote "
+      - "quote_ "
+      - ":quo "
+      - "quo_ "
     label: "Email: Quotation"
     replace: |
       Good day, and warm regards.
@@ -67,29 +100,6 @@ matches:
 
       Best regards,
       Sincerely,
-    vars:
-      - name: year
-        type: shell
-        params:
-          cmd: "(Get-Date).Year"
-
-
-
-
-  - trigger: ":cot "
-    label: "Email: Cotización"
-    replace: |
-      Buen día, reciban un cordial saludo.
-
-      Por medio del presente correo electrónico,
-      me permito adjuntar la cotización correspondiente para el proyecto:
-
-      Cotización ({{year}})
-
-      Agradezco su atención y quedo a disposición para ampliar cualquier información que consideren necesaria
-      o brindar cualquier soporte requerido durante el proceso.
-
-      Cordial saludo,
     vars:
       - name: year
         type: shell
