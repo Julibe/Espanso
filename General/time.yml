@@ -1,5 +1,11 @@
 matches:
-  - trigger: ":date "
+  - triggers:
+      - ":date "
+      - "date_ "
+      - ":time "
+      - "time_ "
+      - ":year "
+      - "year_ "
     label: "Time: Insert date or year"
     replace: "{{date_or_year}}"
     vars:
@@ -58,6 +64,7 @@ matches:
           cmd: |
             $y = Get-Date
             Write-Output ($y.ToString("yyyy"))
+
 
       - name: date_or_year
         type: choice
