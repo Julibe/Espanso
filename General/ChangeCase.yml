@@ -13,7 +13,6 @@ matches:
           shell: powershell
           cmd: "Get-Clipboard | ForEach-Object { $_.ToUpper() }"
 
-
   - triggers:
       - ":low "
       - "low_ "
@@ -35,7 +34,6 @@ matches:
       - "title_ "
       - ":titlecase "
       - "titlecase_ "
-
     label: "Change Case: Title Case"
     replace: "{{output}}"
     vars:
@@ -74,7 +72,6 @@ matches:
             $t = $t.Substring(0,1).ToUpper() + $t.Substring(1)
             $t = [regex]::Replace($t, $regex, { param($m) $m.Value.ToUpper() })
             $t
-
 
   - triggers:
       - ":func "
@@ -120,7 +117,7 @@ matches:
       - ":slug "
       - "slug_ "
       - ":dash "
-      - "dash_
+      - "dash_ "
     label: "Change Case: slug-case"
     replace: "{{output}}"
     vars:
@@ -182,7 +179,6 @@ matches:
       - "space_ "
       - ":s "
       - "s_ "
-    label: "Clean Text: Remove extras "
     label: "Clean Text: Remove extra spaces"
     replace: "{{output}}"
     vars:
@@ -195,7 +191,6 @@ matches:
             $t = $t -replace '\s+', ' '
             $t = $t.Trim()
             $t
-
 
   - triggers:
       - "-:br "
@@ -214,7 +209,6 @@ matches:
             $t = $t -replace '\s+', ' '
             $t = $t.Trim()
             $t
-
 
   - triggers:
       - ":count "
@@ -235,7 +229,6 @@ matches:
             $lines = ($t -split "(\r?\n)").Count
             $readingTime = [math]::Ceiling($words / 200)
             "Words: $words | Characters: $chars | Lines: $lines | Est. Reading Time: $readingTime min"
-
 
   - triggers:
       - ":qd "
