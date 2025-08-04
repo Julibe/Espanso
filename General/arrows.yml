@@ -1,5 +1,11 @@
 matches:
-  - trigger: ":char "
+  - triggers:
+      - ":char "
+      - "char_ "
+      - ":arrow "
+      - "arrow_ "
+      - ":symbol "
+      - "symbol_ "
     label: "Character: Pick a symbol"
     replace: "{{symbol}}"
     vars:
