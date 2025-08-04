@@ -1,13 +1,19 @@
 matches:
-  - trigger: ":lorem "
+  - triggers:
+      - ":lorem "
+      - "lorem_ "
     label: "Lorem ipsum (Paragraph)"
     replace: "
-     Cras maximus, arcu id semper scelerisque, sem risus finibus leo, eu imperdiet metus leo eget diam. Ut nec diam et tortor varius tincidunt.\n
-     Vestibulum cursus pretium nulla, quis consectetur orci iaculis ut. Fusce euismod tincidunt sapien, vitae volutpat eros facilisis sed.\n
-     Morbi ultricies varius ipsum, eget sagittis erat pretium et.\n
-     Duis sit amet leo id tortor porta elementum. Proin commodo lectus in metus elementum, eu tempus enim tristique. Duis faucibus, tortor quis tincidunt viverra, urna dui commodo ligula, et semper lacus nibh ac lacus.\n
+      Cras maximus, arcu id semper scelerisque, sem risus finibus leo, eu imperdiet metus leo eget diam. Ut nec diam et tortor varius tincidunt.\n
+      Vestibulum cursus pretium nulla, quis consectetur orci iaculis ut. Fusce euismod tincidunt sapien, vitae volutpat eros facilisis sed.\n
+      Morbi ultricies varius ipsum, eget sagittis erat pretium et.\n
+      Duis sit amet leo id tortor porta elementum. Proin commodo lectus in metus elementum, eu tempus enim tristique. Duis faucibus, tortor quis tincidunt viverra, urna dui commodo ligula, et semper lacus nibh ac lacus.\n
     "
-  - trigger: ":lor "
+
+  - triggers:
+      - ":lor "
+      - "lor_ "
+
     label: "Lorem ipsum (Sentence)"
     replace: "Vestibulum cursus pretium nulla, quis consectetur orci iaculis ut, sed facilisis eros volutpat vitae.\n"
   - trigger: ":loremipsum "
