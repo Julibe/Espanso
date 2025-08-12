@@ -111,7 +111,7 @@ matches:
 
     - trigger: ":wait "  # ask to wait a moment
       label: "Shortcut: Wait a Moment"
-      replace: "Excuse me, Please wait a just a moment."
+      replace: "Excuse me, please wait just a moment."
 
     - trigger: ":thxa "  # thank everyone
       label: "Shortcut: Thank You All"
