@@ -1,4 +1,6 @@
+# yamllint disable rule:line-length
 matches:
+  # insert lorem ipsum paragraph
   - triggers:
       - ":lorem "
       - "lorem_ "
@@ -10,12 +12,14 @@ matches:
       Duis sit amet leo id tortor porta elementum. Proin commodo lectus in metus elementum, eu tempus enim tristique. Duis faucibus, tortor quis tincidunt viverra, urna dui commodo ligula, et semper lacus nibh ac lacus.\n
     "
 
+  # insert lorem ipsum sentence
   - triggers:
       - ":lor "
       - "lor_ "
 
     label: "Lorem ipsum (Sentence)"
     replace: "Vestibulum cursus pretium nulla, quis consectetur orci iaculis ut, sed facilisis eros volutpat vitae.\n"
+  # insert full page of lorem ipsum
   - trigger: ":loremipsum "
     label: "Lorem ipsum (Page)"
     replace: "

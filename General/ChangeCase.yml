@@ -1,4 +1,6 @@
+# yamllint disable rule:line-length
 matches:
+  # convert clipboard to UPPERCASE
   - triggers:
       - ":up "
       - "up_ "
@@ -13,6 +15,7 @@ matches:
           shell: powershell
           cmd: "Get-Clipboard | ForEach-Object { $_.ToUpper() }"
 
+  # convert clipboard to lowercase
   - triggers:
       - ":low "
       - "low_ "
@@ -27,6 +30,7 @@ matches:
           shell: powershell
           cmd: "Get-Clipboard | ForEach-Object { $_.ToLower() }"
 
+  # convert clipboard to Title Case
   - triggers:
       - ":tit "
       - "tit_ "
@@ -51,6 +55,7 @@ matches:
             }
             $title -join ' '
 
+  # convert clipboard to Sentence case
   - triggers:
       - ":sent "
       - "sent_ "
@@ -73,6 +78,7 @@ matches:
             $t = [regex]::Replace($t, $regex, { param($m) $m.Value.ToUpper() })
             $t
 
+  # convert clipboard to camelCase
   - triggers:
       - ":func "
       - "func_ "
@@ -92,6 +98,7 @@ matches:
             $rest = $words[1..($words.Length - 1)] | ForEach-Object { $_.Substring(0,1).ToUpper() + $_.Substring(1).ToLower() }
             Write-Output ($first + ($rest -join ''))
 
+  # convert clipboard to snake_case
   - triggers:
       - ":code "
       - "code_ "
@@ -113,6 +120,7 @@ matches:
             $s = $t.ToLower() -replace '[^a-z0-9]+','_'
             Write-Output ($s.Trim('_'))
 
+  # convert clipboard to slug-case
   - triggers:
       - ":slug "
       - "slug_ "
@@ -131,6 +139,7 @@ matches:
             $t = $t -replace '\s+', '-'
             $t.Trim('-')
 
+  # remove newline characters from clipboard
   - triggers:
       - ":new "
       - "new_ "
@@ -152,6 +161,7 @@ matches:
             $t = $t.Trim()
             $t
 
+  # strip punctuation from clipboard
   - triggers:
       - ":clean "
       - "clean_ "
@@ -174,6 +184,7 @@ matches:
             $t = $t.Trim()
             $t
 
+  # collapse multiple spaces
   - triggers:
       - ":space "
       - "space_ "
@@ -192,6 +203,7 @@ matches:
             $t = $t.Trim()
             $t
 
+  # remove <br> tags
   - triggers:
       - "-:br "
       - "-br_ "
@@ -210,6 +222,7 @@ matches:
             $t = $t.Trim()
             $t
 
+  # show clipboard word/char counts
   - triggers:
       - ":count "
       - "count_ "
@@ -230,6 +243,7 @@ matches:
             $readingTime = [math]::Ceiling($words / 200)
             "Words: $words | Characters: $chars | Lines: $lines | Est. Reading Time: $readingTime min"
 
+  # convert quotes to double quotes
   - triggers:
       - ":qd "
       - "qd_ "
@@ -248,6 +262,7 @@ matches:
             $t = $t -replace "'", '"'
             $t
 
+  # convert quotes to single quotes
   - triggers:
       - ":q "
       - "q_ "
@@ -268,6 +283,7 @@ matches:
             $t = $t -replace '"', "'"
             $t
 
+  # convert quotes to backticks
   - triggers:
       - ":qr "
       - "qr_ "

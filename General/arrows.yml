@@ -1,4 +1,6 @@
+# yamllint disable rule:line-length
 matches:
+  # open character picker
   - triggers:
       - ":char "
       - "char_ "

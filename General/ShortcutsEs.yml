@@ -1,133 +1,168 @@
+---
 matches:
+  # expresión de agradecimiento
   - trigger: ":th_ "
     label: "Atajo: ¡Gracias!"
     replace: "¡Gracias!"
 
+  # saludo de buen día
   - trigger: ":gd_ "
     label: "Atajo: Hola, buen día"
     replace: "Hola, buen día, "
 
+  # saludo matutino
   - trigger: ":gm_ "
     label: "Atajo: Buenos días"
     replace: "Buenos días, "
 
+  # despedida nocturna
   - trigger: ":gn_ "
     label: "Atajo: Buenas noches"
     replace: "Buenas noches, "
 
+  # saludo vespertino
   - trigger: ":ga_ "
     label: "Atajo: Buenas tardes"
     replace: "Buenas tardes, "
 
+  # saludo de tarde-noche
   - trigger: ":ge_ "
     label: "Atajo: Buenas tardes/noches"
     replace: "Buenas tardes o casi noches, "
 
+  # saludo casual
   - trigger: ":hi_ "
     label: "Atajo: Hola"
     replace: "Hola, "
 
 
+  # responder de nada
+
   - trigger: ":yw_ "
     label: "Atajo: ¡De nada!"
     replace: "¡De nada!"
 
+  # respuesta más cordial
   - trigger: ":urw_ "
     label: "Atajo: De nada, muy amable"
     replace: "De nada, muy amable."
 
+  # asegurar que no hay problema
   - trigger: ":np_ "
     label: "Atajo: ¡No hay problema!"
     replace: "¡No hay problema!"
 
+  # enfatizar que no hay problema
   - trigger: ":npa_ "
     label: "Atajo: ¡Ningún problema en absoluto!"
     replace: "¡Ningún problema en absoluto!"
 
+  # pedir por favor
   - trigger: ":pls_ "
     label: "Atajo: Por favor"
     replace: "Por favor"
 
+  # compartir información
   - trigger: ":fyi_ "
     label: "Atajo: Para tu información"
     replace: "Para tu información"
 
+  # pedir urgencia
   - trigger: ":asap_ "
     label: "Atajo: Lo antes posible"
     replace: "Lo antes posible"
 
+  # gracias abreviado
   - trigger: ":thx_ "
     label: "Atajo: ¡Gracias!"
     replace: "¡Gracias!"
 
+  # agradecimiento grande
   - trigger: ":thxm_ "
     label: "Atajo: ¡Muchísimas gracias!"
     replace: "¡Muchísimas gracias!"
 
+  # agradecer a todos
   - trigger: ":thxa_ "
     label: "Atajo: ¡Gracias a todos!"
     replace: "¡Gracias a todos!"
 
+  # introducir una pregunta
   - trigger: ":q_ "
     label: "Atajo: Pregunta"
     replace: "Pregunta:"
 
+  # introducir una sugerencia
   - trigger: ":sug_ "
     label: "Atajo: Sugerencia"
     replace: "Sugerencia:"
 
+  # disculpa por la demora
   - trigger: ":delay_ "
     label: "Atajo: Disculpa la demora"
     replace: "Disculpa la demora."
 
+  # indicar que quedas pendiente
   - trigger: ":sb_ "
     label: "Atajo: Quedo pendiente"
     replace: "Quedo pendiente de cualquier cosa que necesites."
 
+  # simple ok
   - trigger: ":ok_ "
     label: "Atajo: Ok"
     replace: "Ok"
 
+  # me ausento un momento
   - trigger: ":brb_ "
     label: "Atajo: Vuelvo enseguida"
     replace: "Vuelvo enseguida."
 
+  # hazme saber
   - trigger: ":lmk_ "
     label: "Atajo: Hazme saber"
     replace: "Hazme saber si tienes alguna pregunta."
 
+  # debo irme
   - trigger: ":gtg_ "
     label: "Atajo: Me tengo que ir"
     replace: "Me tengo que ir, hablamos pronto."
 
+  # expresar duda
   - trigger: ":idk_ "
     label: "Atajo: No sé"
     replace: "No sé, no estoy seguro…"
 
+  # confirmar entendido
   - trigger: ":ack_ "
     label: "Atajo: Entendido"
     replace: "Entendido."
 
+  # agradecer la espera
   - trigger: ":tyfw_ "
     label: "Atajo: Gracias por esperar"
     replace: "Gracias por esperar y por tu paciencia."
 
+  # pedir que espere
   - trigger: ":wait_ "
     label: "Atajo: Espera un momento"
     replace: "Disculpa, por favor espera un momento."
 
+  # desear suerte y diversión
   - trigger: ":glhf_ "
     label: "Atajo: ¡Buena suerte, diviértete!"
     replace: "¡Buena suerte y diviértete!"
 
+  # expresar opinión
   - trigger: ":imo_ "
     label: "Atajo: En mi opinión"
     replace: "En mi opinión, "
 
+  # añadir por cierto
   - trigger: ":btw_ "
     label: "Atajo: Por cierto"
     replace: "Por cierto, "
 
+  # indicar que te encargas
   - trigger: ":onit_ "
     label: "Atajo: Me encargo de esto"
     replace: "Me encargo de esto, lo atenderé de inmediato."

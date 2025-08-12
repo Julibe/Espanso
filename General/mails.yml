@@ -1,4 +1,6 @@
+# yamllint disable rule:line-length
 matches:
+  # template for Spanish invoice email
   - triggers:
       - ":cu "
       - "cu_ "
@@ -27,8 +29,9 @@ matches:
         params:
           cmd: "(Get-Date).Year"
 
+  # template for Spanish quotation email
   - triggers:
-      -  ":cot "
+      - ":cot "
       - "cot_ "
       - ":cotizacion "
       - "cotizacion_ "
@@ -51,11 +54,12 @@ matches:
         params:
           cmd: "(Get-Date).Year"
 
+  # template for English invoice email
   - triggers:
       - ":invoice "
       - "invoice_ "
       - ":inv "
-      - "inv_   "
+      - "inv_ "
     label: "Email: invoice"
     replace: |
       Good day, and warm regards.
@@ -81,6 +85,7 @@ matches:
         params:
           cmd: "(Get-Date).Year"
 
+  # template for English quotation email
   - triggers:
       - ":quote "
       - "quote_ "

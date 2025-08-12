@@ -1,4 +1,6 @@
+# yamllint disable rule:line-length
 matches:
+  # insert date or year
   - triggers:
       - ":date "
       - "date_ "
