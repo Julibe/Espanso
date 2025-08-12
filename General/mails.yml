@@ -28,7 +28,7 @@ matches:
           cmd: "(Get-Date).Year"
 
   - triggers:
-      -  ":cot "
+      - ":cot "
       - "cot_ "
       - ":cotizacion "
       - "cotizacion_ "
@@ -55,7 +55,7 @@ matches:
       - ":invoice "
       - "invoice_ "
       - ":inv "
-      - "inv_   "
+      - "inv_ "
     label: "Email: invoice"
     replace: |
       Good day, and warm regards.
