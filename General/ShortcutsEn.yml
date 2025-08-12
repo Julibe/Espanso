@@ -85,8 +85,8 @@ matches:
       label: "Shortcut: Let Me Know"
       replace: "Let me know if you have any questions."
 
-    - trigger: ":np "  # reassure no problem at all
-      label: "Shortcut: No Problem at all!"
+    - trigger: ":npa "  # reassure no problem at all
+      label: "Shortcut: No Problem At All!"
       replace: "No problem at all!"
 
     - trigger: ":urw "  # warmly you're welcome
@@ -117,8 +117,8 @@ matches:
       label: "Shortcut: Thank You All"
       replace: "Thank you all!"
 
-    - trigger: ":gn "  # wish good night
-      label: "Shortcut: Good Night"
+    - trigger: ":gnt "  # wish good night, talk soon
+      label: "Shortcut: Good Night (Talk Soon)"
       replace: "Good night, talk soon."
 
     - trigger: ":glhf "  # wish luck and fun
