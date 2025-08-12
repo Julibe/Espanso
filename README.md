@@ -27,5 +27,5 @@ To link this GitHub repo (`A:\test\Espanso`) with your Espanso match folder (`C:
 
 ```cmd
 rmdir "C:\Users\Julibe\AppData\Roaming\espanso\match"
-mklink /J "C:\Users\Julibe\AppData\Roaming\espanso\match" "A:\test\Espanso
+mklink /J "C:\Users\Julibe\AppData\Roaming\espanso\match" "A:\test\Espanso"
 ```
