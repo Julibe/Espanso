@@ -1,137 +1,138 @@
+---
 matches:
-    - trigger: ":th "
+    - trigger: ":th "  # express gratitude
       label: "Shortcut: Thank You!"
       replace: "Thank you!"
 
-    - trigger: ":gd "
+    - trigger: ":gd "  # greet someone with good day
       label: "Shortcut: Good Day"
       replace: "Hello, Good Day, "
 
-    - trigger: ":gm "
+    - trigger: ":gm "  # morning greeting
       label: "Shortcut: Good Morning"
       replace: "Good morning, "
 
-    - trigger: ":gn "
+    - trigger: ":gn "  # nightly farewell
       label: "Shortcut: Good Night"
       replace: "Good night, "
 
-    - trigger: ":ga "
+    - trigger: ":ga "  # afternoon greeting
       label: "Shortcut: Good Afternoon"
       replace: "Good afternoon, "
 
-    - trigger: ":ge "
+    - trigger: ":ge "  # evening greeting
       label: "Shortcut: Good Evening"
       replace: "Good evening, "
 
-    - trigger: ":hi "
+    - trigger: ":hi "  # casual hello
       label: "Shortcut: Hello"
       replace: "Hello, "
 
 
-    - trigger: ":yw "
+    - trigger: ":yw "  # respond with you're welcome
       label: "Shortcut: You're Welcome!"
       replace: "You're welcome!"
 
-    - trigger: ":np "
+    - trigger: ":np "  # reassure no problem
       label: "Shortcut: No Problem!"
       replace: "No problem!"
 
-    - trigger: ":pls "
+    - trigger: ":pls "  # polite please
       label: "Shortcut: Please"
       replace: "Please"
 
-    - trigger: ":fyi "
+    - trigger: ":fyi "  # share for your information
       label: "Shortcut: For Your Information"
       replace: "For your information"
 
-    - trigger: ":asap "
+    - trigger: ":asap "  # request urgency
       label: "Shortcut: As Soon As Possible"
       replace: "As soon as possible"
 
-    - trigger: ":thx "
+    - trigger: ":thx "  # quick thanks
       label: "Shortcut: Thanks!"
       replace: "Thanks!"
 
-    - trigger: ":q "
+    - trigger: ":q "  # introduce a question
       label: "Shortcut: Question"
       replace: "Question:"
 
-    - trigger: ":sug "
+    - trigger: ":sug "  # introduce a suggestion
       label: "Shortcut: Suggestion"
       replace: "Suggestion:"
 
-    - trigger: ":delay "
+    - trigger: ":delay "  # apologize for delay
       label: "Shortcut: Apologies for Delay"
       replace: "Apologies for the delay."
 
-    - trigger: ":sb "
+    - trigger: ":sb "  # indicate standby
       label: "Shortcut: Standing By"
       replace: "I'll be standing by for anything you need."
 
-    - trigger: ":ok "
+    - trigger: ":ok "  # simple acknowledgment
       label: "Shortcut: Okay"
       replace: "Okay"
 
-    - trigger: ":brb "
+    - trigger: ":brb "  # step away briefly
       label: "Shortcut: Be Right Back"
       replace: "Be right back."
 
-    - trigger: ":thxm "
+    - trigger: ":thxm "  # express big thanks
       label: "Shortcut: Thank You So Much!"
       replace: "Thank you so much!"
 
-    - trigger: ":lmk "
+    - trigger: ":lmk "  # ask to let you know
       label: "Shortcut: Let Me Know"
       replace: "Let me know if you have any questions."
 
-    - trigger: ":np "
+    - trigger: ":np "  # reassure no problem at all
       label: "Shortcut: No Problem at all!"
       replace: "No problem at all!"
 
-    - trigger: ":urw "
+    - trigger: ":urw "  # warmly you're welcome
       label: "Shortcut: You're Very Welcome"
       replace: "You're very welcome."
 
-    - trigger: ":gtg "
+    - trigger: ":gtg "  # need to leave
       label: "Shortcut: Got To Go"
       replace: "Got to go, talk soon!"
 
-    - trigger: ":idk "
+    - trigger: ":idk "  # express uncertainty
       label: "Shortcut: I Don't Know"
       replace: "I Don't Know, I'm not sure…"
 
-    - trigger: ":ack "
+    - trigger: ":ack "  # acknowledge receipt
       label: "Shortcut: Acknowledged"
       replace: "Acknowledged!"
 
-    - trigger: ":tyfw "
+    - trigger: ":tyfw "  # thank for waiting
       label: "Shortcut: Thank You for Waiting"
       replace: "Thank You for waiting, and for your patience."
 
-    - trigger: ":wait "
+    - trigger: ":wait "  # ask to wait a moment
       label: "Shortcut: Wait a Moment"
       replace: "Excuse me, Please wait a just a moment."
 
-    - trigger: ":thxa "
+    - trigger: ":thxa "  # thank everyone
       label: "Shortcut: Thank You All"
       replace: "Thank you all!"
 
-    - trigger: ":gn "
+    - trigger: ":gn "  # wish good night
       label: "Shortcut: Good Night"
       replace: "Good night, talk soon."
 
-    - trigger: ":glhf "
+    - trigger: ":glhf "  # wish luck and fun
       label: "Shortcut: Good Luck, Have Fun"
       replace: "Good luck and have fun!"
 
-    - trigger: ":imo "
+    - trigger: ":imo "  # share opinion
       label: "Shortcut: In My Opinion"
       replace: "In my opinion, "
 
-    - trigger: ":btw "
+    - trigger: ":btw "  # add by the way
       label: "Shortcut: By The Way"
       replace: "By the way, "
 
-    - trigger: ":onit "
+    - trigger: ":onit "  # indicate you are on it
       label: "Shortcut: On It"
       replace: "I'm on it, I'll take care of this right away."
