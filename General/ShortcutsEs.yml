@@ -37,7 +37,6 @@ matches:
 
 
   # responder de nada
-
   - trigger: ":yw_ "
     label: "Atajo: ¡De nada!"
     replace: "¡De nada!"

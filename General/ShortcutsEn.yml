@@ -37,7 +37,6 @@ matches:
 
 
     # respond with you're welcome
-
     - trigger: ":yw "
       label: "Shortcut: You're Welcome!"
       replace: "You're welcome!"
@@ -108,8 +107,8 @@ matches:
       replace: "Let me know if you have any questions."
 
     # reassure no problem at all
-    - trigger: ":np "
-      label: "Shortcut: No Problem at all!"
+    - trigger: ":npa "
+      label: "Shortcut: No Problem At All!"
       replace: "No problem at all!"
 
     # warmly you're welcome
@@ -140,16 +139,16 @@ matches:
     # ask to wait a moment
     - trigger: ":wait "
       label: "Shortcut: Wait a Moment"
-      replace: "Excuse me, Please wait a just a moment."
+      replace: "Excuse me, please wait just a moment."
 
     # thank everyone
     - trigger: ":thxa "
       label: "Shortcut: Thank You All"
       replace: "Thank you all!"
 
-    # wish good night
-    - trigger: ":gn "
-      label: "Shortcut: Good Night"
+    # wish good night, talk soon
+    - trigger: ":gnt "
+      label: "Shortcut: Good Night (Talk Soon)"
       replace: "Good night, talk soon."
 
     # wish luck and fun
