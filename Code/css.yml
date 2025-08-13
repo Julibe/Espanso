@@ -1,0 +1,66 @@
+matches:
+  - triggers:
+      - ":css_glass "
+      - "css_glass_ "
+      - ":css_blur "
+      - "css_blur_ "
+    label: "CSS Glass"
+    replace: ".glass {\n\tbackdrop-filter: blur(10px);\n}\n"
+
+  - triggers:
+      - ":css_upper "
+      - "css_upper_ "
+      - ":css_mayus "
+      - "css_mayus_ "
+      - "css_up_ "
+      - ":css_up "
+    label: "CSS Uppercase"
+    replace: ".upper {\n\ttext-transform: uppercase;\n}\n"
+
+  - triggers:
+      - ":css_lower "
+      - "css_lower_ "
+      - ":css_low "
+      - "css_low_ "
+    label: "CSS Lowercase"
+    replace: ".lower {\n\ttext-transform: lowercase;\n}\n"
+
+  - triggers:
+      - ":css_center "
+      - "css_center_ "
+      - ":css_c "
+      - "css_c_ "
+    label: "CSS Center"
+    replace: ".center {\n\ttext-align: center;\n}\n"
+
+  - triggers:
+      - ":css_left "
+      - "css_left_ "
+      - ":css_l "
+      - "css_l_ "
+    label: "CSS Left"
+    replace: ".left {\n\ttext-align: left;\n}\n"
+
+  - triggers:
+      - ":css_right "
+      - "css_right_ "
+      - ":css_r "
+      - "css_r_ "
+    label: "CSS Right"
+    replace: ".right {\n\ttext-align: right;\n}\n"
+
+  - triggers:
+      - ":css_hidden "
+      - "css_hidden_ "
+      - ":css_hide "
+      - "css_hide_ "
+    label: "CSS Hidden"
+    replace: ".hidden {\n\tdisplay: none;\n}\n"
+
+  - triggers:
+      - ":css_block "
+      - "css_block_ "
+      - ":css_show "
+      - "css_show_ "
+    label: "CSS Block"
+    replace: ".block {\n\tdisplay: block;\n}\n"
