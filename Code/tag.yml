@@ -1,4 +1,5 @@
 matches:
+      # Choose HTML tag
   - triggers:
       - ":tag "
       - "tag_ "

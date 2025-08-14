@@ -14,24 +14,32 @@ matches:
             # Core attributes
             - label: "HTML Attribute ID"
               id: "id"
+            # HTML Attribute Class
             - label: "HTML Attribute Class"
               id: "class"
+            # HTML Attribute Style
             - label: "HTML Attribute Style"
               id: "style"
+            # HTML Attribute Title
             - label: "HTML Attribute Title"
               id: "title"
+            # HTML Attribute Name
             - label: "HTML Attribute Name"
               id: "name"
+            # HTML Attribute Lang
             - label: "HTML Attribute Lang"
               id: "lang"
+            # HTML Attribute Dir (Direction)
             - label: "HTML Attribute Dir (Direction)"
               id: "dir"
 
-            # ARIA & Accessibility
+            # HTML Attribute Role (ARIA)
             - label: "HTML Attribute Role (ARIA)"
               id: "role"
+            # HTML Attribute Aria-label
             - label: "HTML Attribute Aria-label"
               id: "aria-label"
+            # HTML Attribute Aria-hidden
             - label: "HTML Attribute Aria-hidden"
               id: "aria-hidden"
             - label: "HTML Attribute Aria-describedby"
