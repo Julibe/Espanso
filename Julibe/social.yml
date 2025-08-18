@@ -95,6 +95,6 @@ matches:
             - label: "Phixel"
               id: "https://phixel.net/"
             - label: "E-mail"
-              id: "mailto:mail@julibe.com"
+              id: "mail@julibe.com"
             - label: "Phone"
               id: "+573125837936"
