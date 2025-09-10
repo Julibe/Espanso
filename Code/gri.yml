@@ -1,0 +1,54 @@
+matches:
+  - triggers:
+      - "gri_"
+      - ":gri "
+    label: "Write gri shortcode with color"
+    replace: "[gri class=\"{{color}}\"]{{cleaned}}[/gri]"
+    vars:
+      - name: color
+        type: choice
+        params:
+          message: "Select a color:"
+          values:
+            - label: "White"
+              id: "white"
+            - label: "Black"
+              id: "black"
+            - label: "Cyan"
+              id: "cyan"
+            - label: "Red"
+              id: "red"
+            - label: "Blue"
+              id: "blue"
+            - label: "Green"
+              id: "green"
+            - label: "Yellow"
+              id: "yellow"
+            - label: "Gray"
+              id: "gray"
+            - label: "Orange"
+              id: "orange"
+            - label: "Purple"
+              id: "purple"
+            - label: "Pink"
+              id: "pink"
+            - label: "Brown"
+              id: "brown"
+      - name: rawText
+        type: clipboard
+        fallback: input
+      - name: cleaned
+        type: script
+        params:
+          args:
+            - powershell
+            - -NoProfile
+            - -Command
+            - |
+              [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+              $t = $env:ESPANSO_RAWTEXT
+              # Replace " y " with comma
+              $t = $t -replace ' y ', ','
+              # Remove all remaining whitespace
+              $t = -join ($t -split '\s+')
+              Write-Output $t

@@ -1,0 +1,8 @@
+matches:
+  - triggers:
+      - "b_"
+      - "br_ "
+      - ":b"
+      - ":br"
+    label: "Write a break line"
+    replace: "<br>"

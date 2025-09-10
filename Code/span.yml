@@ -1,0 +1,45 @@
+matches:
+  - triggers:
+      - "sp_"
+      - "span_ "
+      - ":sp"
+      - ":span"
+    label: "Write open span with class color"
+    replace: "<span class=\"{{color}}\">"
+    vars:
+      - name: color
+        type: choice
+        params:
+          message: "Select a color:"
+          values:
+            - label: "White"
+              id: "white"
+            - label: "Black"
+              id: "black"
+            - label: "Cyan"
+              id: "cyan"
+            - label: "Red"
+              id: "red"
+            - label: "Blue"
+              id: "blue"
+            - label: "Green"
+              id: "green"
+            - label: "Yellow"
+              id: "yellow"
+            - label: "Gray"
+              id: "gray"
+            - label: "Orange"
+              id: "orange"
+            - label: "Purple"
+              id: "purple"
+            - label: "Pink"
+              id: "pink"
+            - label: "Brown"
+              id: "brown"
+
+
+  - triggers:
+      - "_sp "
+      - "_span "
+    label: "Write close span"
+    replace: "</span>"

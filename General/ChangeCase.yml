@@ -28,8 +28,8 @@ matches:
           cmd: "Get-Clipboard | ForEach-Object { $_.ToLower() }"
 
   - triggers:
-      - ":tit "
-      - "tit_ "
+      - ":ti "
+      - "ti_ "
       - ":title "
       - "title_ "
       - ":titlecase "
@@ -136,6 +136,8 @@ matches:
       - "new_ "
       - ":nl "
       - "nl_ "
+      - ":l "
+      - "l_ "
       - ":newline "
       - "newline_ "
     label: "Clean Text: Remove new lines"
