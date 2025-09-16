@@ -1,0 +1,41 @@
+matches:
+  - triggers:
+      - "color_"
+      - ":color"
+      - "col_"
+      - ":col"
+      - "cc_"
+      - ":cc"
+    label: "Write a class color"
+    replace: 'class="{{color}}"'
+    vars:
+      - name: color
+        type: choice
+        default: "cyan"
+        params:
+          message: "Select a color:"
+          values:
+            - id: "white"
+              label: "White"
+            - id: "black"
+              label: "Black"
+            - id: "cyan"
+              label: "Cyan"
+            - id: "red"
+              label: "Red"
+            - id: "blue"
+              label: "Blue"
+            - id: "green"
+              label: "Green"
+            - id: "yellow"
+              label: "Yellow"
+            - id: "gray"
+              label: "Gray"
+            - id: "orange"
+              label: "Orange"
+            - id: "purple"
+              label: "Purple"
+            - id: "pink"
+              label: "Pink"
+            - id: "brown"
+              label: "Brown"

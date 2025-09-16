@@ -9,13 +9,14 @@ matches:
         type: choice
         params:
           message: "Select a color:"
+          default: "cyan"
           values:
+            - label: "Cyan"
+              id: "cyan"
             - label: "White"
               id: "white"
             - label: "Black"
               id: "black"
-            - label: "Cyan"
-              id: "cyan"
             - label: "Red"
               id: "red"
             - label: "Blue"
