@@ -7,9 +7,9 @@ matches:
     vars:
       - name: color
         type: choice
+        default: "cyan"
         params:
           message: "Select a color:"
-          default: "cyan"
           values:
             - label: "Cyan"
               id: "cyan"

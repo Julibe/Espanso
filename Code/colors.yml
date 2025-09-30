@@ -1,13 +1,7 @@
 matches:
-  - triggers:
-      - "color_"
-      - ":color"
-      - "col_"
-      - ":col"
-      - "cc_"
-      - ":cc"
+  - triggers: ["color_ ", ":color ", "col_ ", ":col ", "cc_ ", ":cc "]
     label: "Write a class color"
-    replace: 'class="{{color}}"'
+    replace: ' class="{{color}}" '
     vars:
       - name: color
         type: choice
@@ -39,3 +33,39 @@ matches:
               label: "Pink"
             - id: "brown"
               label: "Brown"
+
+  - triggers: [":white ", "white_ ", "wh_ ", ":wh "]
+    replace: ' class="white" '
+
+  - triggers: [":black ", "black_ ", "bk_ ", ":bk "]
+    replace: ' class="black" '
+
+  - triggers: [":cyan ", "cyan_ ", "cy_ ", ":cy "]
+    replace: ' class="cyan" '
+
+  - triggers: [":red ", "red_ ", "r_ ", ":r "]
+    replace: ' class="red" '
+
+  - triggers: [":blue ", "blue_ ", "b_ ", ":b "]
+    replace: ' class="blue" '
+
+  - triggers: [":green ", "green_ ", "g_ ", ":g "]
+    replace: ' class="green" '
+
+  - triggers: [":yellow ", "yellow_ ", "y_ ", ":y "]
+    replace: ' class="yellow" '
+
+  - triggers: [":gray ", "gray_ ", "gr_ ", ":gr "]
+    replace: ' class="gray" '
+
+  - triggers: [":orange ", "orange_ ", "o_ ", ":o "]
+    replace: ' class="orange" '
+
+  - triggers: [":purple ", "purple_ ", "p_ ", ":p "]
+    replace: ' class="purple" '
+
+  - triggers: [":pink ", "pink_ ", "pk_ ", ":pk "]
+    replace: ' class="pink" '
+
+  - triggers: [":brown ", "brown_ ", "br_ ", ":br "]
+    replace: ' class="brown" '
