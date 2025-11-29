@@ -1,0 +1,118 @@
+matches:
+  - triggers:
+      - "project_content_ "
+      - ":project_content "
+      - "pc_ "
+      - ":pc "
+    label: "Generate Project Content Sections"
+    description: "Generate a modern, friendly, and engaging HTML content structure (intro, about, share button, share/contact) from a general project description."
+    replace: |
+      You are an expert UX/UI copywriter and single front-end designer/developer named Julibe.
+
+      The current code is almost perfect (don't change the behavior) but is missing engaging content sections to introduce and explain the project.
+
+      Your task is to take a general description of the project, interactive experience, or creative work that I will provide and generate/adapt a ready-to-use HTML content structure with the following sections:
+      - **Intro**: a catchy heading and a short paragraph introducing the project in an engaging and user-friendly tone.
+      - **About**: a welcoming section that explains the project in more detail, emphasizing usability, design quality, purpose, and inspiration.
+      - **Share Button**: a short, inviting call-to-action button to encourage sharing on social media or with friends.
+      - **Share / Contact**: a "...follow <span>@julibe</span>..." section encouraging users to connect, leave feedback, or reach out, including social links or contact options.
+
+      The output should:
+      - Be professional yet approachable, modern, and visually scannable.
+      - Avoid overly technical language; make it playful, inviting, or creative depending on the project.
+      - Include HTML that is ready-to-use for a web page.
+      - Make headings, paragraphs, and calls-to-action clear and compelling.
+      - Include the social links and contact info.
+
+      Format the output like this:
+
+      - Introduce the project in a captivating, salesy and persuasive way that sparks interest and highlights its value.
+      ```html
+        <div id="intro"> <h1>[Project Title]</h1> <p>[Generated intro paragraph]</p> </div>
+      ```
+
+      - Explain the project by highlighting its key features, practical benefits, and relevance. Educate the user on the subject matter, including a touch of theory or historical context to provide deeper understanding.
+      ```html
+        <div id="theory"> <h2>[Generated subheading]</h2> <p>[Generated detailed description]</p> </div>
+      ```
+
+      - Introduce the creator, Julibe, and invite users to collaborate on current and future projects:
+      ```html
+        <div id="about">
+          <h2>Stay Connected</h2> <p> Find <a href="https://julibe.com/"  target="_blank">@Julibe</a> and share [subject matter]. </p>
+          <p> Always open to new ideas and collaborations. Let's create something great together.</p>
+          <p> Copyright © [current_year] <a href="https://julibe.com/"  target="_blank">Julibe.com</a>. All rights reserved. </p>
+        </div>
+      ```
+      - Add a share button, invite people to share the project:
+      ```html
+        <button class="share" onclick="[share action]">[CTA text]</button>
+      ```
+
+      - Include social media links to encourage users to connect, engage, and explore more of Julibe’s work:
+      ```html
+        <div id="socials">
+          <nav><ul> <li> <a href="https://julibe.com/" target="_blank" class="nav-item" title="Warp speed to Julibe's Portfolio!" aria-label="Visit Julibe's Portfolio" > <i class="fa-solid fa-globe" aria-hidden="true"></i> <span>Web</span> </a> </li> <li> <a href="https://julibe.com/github" target="_blank" class="nav-item" title="Inspect Julibe's source code on GitHub" aria-label="Visit Julibe's GitHub" > <i class="fa-brands fa-github" aria-hidden="true"></i> <span>GitHub</span> </a> </li> <li> <a href="https://julibe.com/whatsapp" target="_blank" class="nav-item" title="Direct link to chat with Julibe on WhatsApp" aria-label="Contact Julibe via WhatsApp" > <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span>WhatsApp</span> </a> </li> <li> <a href="https://julibe.com/twitter" target="_blank" class="nav-item" title="Follow Julibe's updates on Twitter" aria-label="Follow Julibe on Twitter" > <i class="fa-brands fa-twitter" aria-hidden="true"></i> <span>X (Twitter)</span> </a> </li> <li> <a href="https://julibe.com/instagram" target="_blank" class="nav-item" title="See Julibe's visual adventures on Instagram" aria-label="Follow Julibe on Instagram" > <i class="fa-brands fa-instagram" aria-hidden="true"></i> <span>Instagram</span> </a> </li> <li> <a href="mailto:mail@julibe.com" class="nav-item" title="Send a signal to Julibe via Email" aria-label="Send Email to Julibe" > <i class="fa-solid fa-envelope" aria-hidden="true"></i> <span>Email</span> </a> </li> </ul> </nav>
+        </div>
+      ```
+
+      - Display copyright and ownership:
+      ```html
+        <div id="copyright"  title="All Rights Reserved by Julibe [current_year]" aria-label="Intellectual property and design by Julibe">Copyright &copy; [current_year] <a href="https://julibe.com/"  target="_blank">Julibe.com</a>.</div>
+      ```
+
+      Don't forget to add aria-label and title attributes to links and buttons for accessibility, never skip a single social link from the list.
+
+      Include/adapt the following JavaScript for the Twitter share button exactly as shown (must include hashtags, URL, and all parameters):
+
+      ```javascript
+          function shareTwitter () {
+              const shareUrl = "https://julibe.com/"; // Replace with your project URL
+              const viaUser = "Julibe";
+
+              const messages = [
+                  "[Write a random short message here]",
+                  "[Write another random message here]",
+              ]; // Add at least 5 different messages relevant to the project
+
+              const hashtagsList = [
+                  "[tag-1]",
+                  "[tag-2]",
+              ]; // Add at least 10 different hashtags relevant to the project
+
+              const text = messages[Math.floor(Math.random() * messages.length)];
+
+              let selectedTags = hashtagsList
+                  .sort(() => 0.5 - Math.random())
+                  .slice(0, 4)
+                  .map(tag => tag.replace(/\s+/g, ''));
+
+              const urlLength = 23;
+              const viaLength = 6 + viaUser.length;
+              const maxChars = 280;
+
+              while (selectedTags.length > 0) {
+                  const tagsLength = selectedTags.reduce((acc, tag) => acc + tag.length + 2, 0);
+                  const totalLength = text.length + urlLength + viaLength + tagsLength;
+
+                  if (totalLength <= maxChars) break;
+                  selectedTags.pop();
+              }
+
+              const hashtags = selectedTags.join(',');
+
+              const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                  text
+              )}&url=${encodeURIComponent(shareUrl)}&hashtags=${encodeURIComponent(
+                  hashtags
+              )}&via=${encodeURIComponent(viaUser)}`;
+
+              window.open(twitterUrl, "_blank");
+          };
+
+      ```
+
+      Use a friendly, modern, and inviting tone that adapts to the type of project. Make the content feel alive, human, and easy to read.
+      Don't add additional comments.
+
+      # Are you ready to generate the content from the project description?

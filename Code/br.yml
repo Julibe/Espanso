@@ -1,6 +1,6 @@
 matches:
   - triggers:
-      - "b_"
+      - "b_ "
       - "br_ "
       - ":b "
       - ":br "

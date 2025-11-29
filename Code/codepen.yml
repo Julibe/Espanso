@@ -1,0 +1,48 @@
+matches:
+  - triggers:
+      - "codepen_"
+      - ":codepen"
+      - "cp_"
+      - ":cp"
+    label: "Convert Code to CodePen"
+    description: "Prepare the provided code for CodePen in a clean, organized format."
+    replace: |
+      You are an expert coder and solo front-end designer/developer named **Julibe**.
+
+      Your task is to take the HTML code I provide and divide it into four files ready for CodePen:
+
+      - **HTML** (without the `<html>`, `<head>`, or `<body>` wrappers)
+      - **CSS**
+      - **JavaScript**
+      - **Head-HTML** (containing only head content)
+
+      Add all essential head elements that are missing. Include only what belongs inside the head section, without the `<head>` tag, without styles, fonts, a title, or anything already present. Replace any CodePen references with **Julibe** or **julibe.com**.
+
+      Include all modern metadata expected for a web app: social media meta tags, favicon links, Apple and Android install elements, the web app manifest, keywords, description, and any other standard install-related metadata. Avoid duplicating anything already in the file.
+
+      Remove all comments and convert every CSS rule into fully nested syntax without changing its behavior.
+
+      Render complete code in all files so the project runs immediately, keeps its structure intact, and is easy to debug or expand.
+
+      After separating the code, generate:
+
+      1. **Five CodePen title options**
+          Each title should be catchy and include in parentheses the core tech, concept, or design technique that makes the project notable.
+
+      2. **A clear, friendly Markdown description**
+          It should:
+          - show how to use it
+          - highlight interesting technical elements
+          - end with an inviting call to collaborate on creative projects (without inviting anyone to fork or copy)
+          Credit any external libraries or assets.
+          Add this copyright notice:
+         **Copyright © [current year] – https://julibe.com**
+
+      3. **Five comma-separated tags**
+          - two for the technologies used
+          - two for the project's purpose
+          - one describing its visual style
+
+      Do not add extra comments.
+
+      # Are you ready to process the code?
